@@ -52,6 +52,14 @@ agentic_review {
     diff_patterns: "^\\+\\s*virtual\\b"
     rules: "tools/cr/codehealth/rules/overlap/changed-virtuals.md"
   }
+  # A new defaulted enum parameter in a header Brave includes.
+  capability_groups {
+    path_expression: ".*\\.h"
+    path_expression_exclusion: ".*(?:/test/|_test_|mock_|fake_).*"
+    diff_patterns: "^\\+.*\\b\\w+\\s*=\\s*(?:\\w+::)+k[A-Z]\\w*\\)\\s*(?:const\\s*)?(?:override\\s*)?;?\\s*$"
+    brave_mentions: "/(\\w+)\\.h$"
+    rules: "tools/cr/codehealth/rules/overlap/defaulted-parameters.md"
+  }
   capability_groups {
     path_expression: "(?:chrome/browser/ui/views|ui/views)/.*\\.cc"
     path_expression_exclusion: ".*(?:_unittest|_browsertest|_interactive_uitest)\\.cc"

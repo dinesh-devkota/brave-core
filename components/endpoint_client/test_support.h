@@ -37,7 +37,7 @@ namespace endpoint_client {
 
 namespace internal {
 
-std::string ToContent(const IsBodylessResponse auto&) {
+std::string ToContent(const IsResponseWithoutBodies auto&) {
   return "";
 }
 

@@ -1,0 +1,6 @@
+# Tor
+per-file torInternals.d.ts=set noparent
+per-file torInternals.d.ts=file://tools/codeowners/TOR_REVIEWERS_OWNERS
+
+per-file README.md=set noparent
+per-file README.md=*

@@ -1,0 +1,7 @@
+# Rust deps
+set noparent
+file://tools/codeowners/3P_RUST_OWNERS
+
+# Rust code
+per-file *.rs=set noparent
+per-file *.rs=file://tools/codeowners/RUST_REVIEWERS_OWNERS

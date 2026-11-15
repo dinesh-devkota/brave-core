@@ -1,0 +1,11 @@
+# P3A
+set noparent
+file://tools/codeowners/P3A_REVIEWERS_OWNERS
+
+# Rust deps
+per-file Cargo.*=set noparent
+per-file Cargo.*=file://tools/codeowners/RUST_DEPS_REVIEWERS_OWNERS
+
+# Rust code
+per-file *.rs=set noparent
+per-file *.rs=file://tools/codeowners/RUST_REVIEWERS_OWNERS

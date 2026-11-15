@@ -1,0 +1,3 @@
+# protected URLs (needs security review)
+per-file skus_utils.h=set noparent
+per-file skus_utils.h=file://tools/codeowners/SEC_TEAM_OWNERS

@@ -1,0 +1,3 @@
+# Brave Sync
+per-file brave_sync_worker.*=set noparent
+per-file brave_sync_worker.*=file://tools/codeowners/SYNC_REVIEWERS_OWNERS

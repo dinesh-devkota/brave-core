@@ -1,0 +1,7 @@
+# Tor
+set noparent
+file://tools/codeowners/TOR_REVIEWERS_OWNERS
+
+# Strings
+per-file *.grd=set noparent
+per-file *.grd=file://tools/codeowners/STRING_REVIEWERS_TEAM_OWNERS

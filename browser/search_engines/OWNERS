@@ -1,0 +1,3 @@
+# Tor
+per-file tor_window_search_engine_provider_service.*=set noparent
+per-file tor_window_search_engine_provider_service.*=file://tools/codeowners/TOR_REVIEWERS_OWNERS

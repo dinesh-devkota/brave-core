@@ -1,0 +1,4 @@
+# mojo interfaces should be implemented directly by the underlying classes
+per-file ai_chat_settings_helper.*=set noparent
+per-file ai_chat_settings_helper.*=bjohnson@brave.com
+per-file ai_chat_settings_helper.*=peter@brave.com

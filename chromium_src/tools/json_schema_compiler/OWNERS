@@ -1,0 +1,3 @@
+# Chromium Extension API modifications
+set noparent
+file://tools/codeowners/SEC_TEAM_OWNERS

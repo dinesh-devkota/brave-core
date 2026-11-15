@@ -1,0 +1,3 @@
+# Strings
+per-file messages.json=set noparent
+per-file messages.json=file://tools/codeowners/STRING_REVIEWERS_TEAM_OWNERS

@@ -1,0 +1,3 @@
+# Browser commands available via Brave Education content
+per-file brave_education_app.ts=set noparent
+per-file brave_education_app.ts=file://tools/codeowners/SEC_TEAM_OWNERS

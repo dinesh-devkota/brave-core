@@ -1,0 +1,5 @@
+# This file only contains AI prompts that aren't neither user facing nor
+# translateable. There's no reason for the string reviewers team to review
+# them.
+per-file ai_chat_prompts.grdp=set noparent
+per-file ai_chat_prompts.grdp=*

@@ -1,0 +1,7 @@
+# Rewards
+set noparent
+file://tools/codeowners/REWARDS_CLIENT_OWNERS
+
+# Strings
+per-file *.grd=set noparent
+per-file *.grd=file://tools/codeowners/STRING_REVIEWERS_TEAM_OWNERS

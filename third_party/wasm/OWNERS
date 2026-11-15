@@ -1,0 +1,2 @@
+per-file README.md=set noparent
+per-file README.md=*

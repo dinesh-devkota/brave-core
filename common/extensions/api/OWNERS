@@ -1,0 +1,7 @@
+# Chromium Extension API modifications
+set noparent
+file://tools/codeowners/SEC_TEAM_OWNERS
+
+# Strings
+per-file *.grd=set noparent
+per-file *.grd=file://tools/codeowners/STRING_REVIEWERS_TEAM_OWNERS

@@ -1,0 +1,68 @@
+per-file README.md=set noparent
+per-file README.md=clifton@brave.com
+per-file package*.json=set noparent
+per-file package*.json=file://tools/codeowners/JS_DEPS_REVIEWERS_OWNERS
+
+# Explicit rule for the root package.json to be owned by both js-deps-reviewers
+# and build-commands-reviewers as it is used by the build system. Any team can
+# approve changes to this file.
+per-file package.json=set noparent
+per-file package.json=file://tools/codeowners/BUILD_COMMANDS_REVIEWERS_OWNERS
+per-file package.json=file://tools/codeowners/JS_DEPS_REVIEWERS_OWNERS
+
+per-file pnpm*.yaml=set noparent
+per-file pnpm*.yaml=file://tools/codeowners/JS_DEPS_REVIEWERS_OWNERS
+
+# Deprecated - do not use
+per-file BraveNewsUtils.java=set noparent
+per-file BraveNewsUtils.java=bjohnson@brave.com
+
+# Semgrep configuration
+per-file .semgrepignore=set noparent
+per-file .semgrepignore=abrancaleoni@brave.com
+
+# Rust deps
+per-file Cargo.*=set noparent
+per-file Cargo.*=file://tools/codeowners/RUST_DEPS_REVIEWERS_OWNERS
+
+# include_rules
+per-file DEPS=set noparent
+per-file DEPS=file://tools/codeowners/DEPS_REVIEWERS_OWNERS
+
+# Rust code
+per-file *.rs=set noparent
+per-file *.rs=file://tools/codeowners/RUST_REVIEWERS_OWNERS
+
+# Third-party binaries
+per-file *.aar=set noparent
+per-file *.aar=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file *.jar=set noparent
+per-file *.jar=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file *.apk=set noparent
+per-file *.apk=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file *.dex=set noparent
+per-file *.dex=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file *.lib=set noparent
+per-file *.lib=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file *.so=set noparent
+per-file *.so=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file *.o=set noparent
+per-file *.o=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file *.dll=set noparent
+per-file *.dll=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file *.dylib=set noparent
+per-file *.dylib=file://tools/codeowners/SEC_TEAM_OWNERS
+
+# Strings
+per-file *.grd=set noparent
+per-file *.grd=file://tools/codeowners/STRING_REVIEWERS_TEAM_OWNERS
+per-file *.grdp=set noparent
+per-file *.grdp=file://tools/codeowners/STRING_REVIEWERS_TEAM_OWNERS
+
+# changes to upstream content settings should be done as patches
+per-file content_settings_registry.cc=set noparent
+per-file content_settings_registry.cc=file://tools/codeowners/CONTENT_SETTINGS_REVIEWERS_OWNERS
+
+# new content settings need review
+per-file content_settings_types.mojom=set noparent
+per-file content_settings_types.mojom=file://tools/codeowners/CONTENT_SETTINGS_REVIEWERS_OWNERS

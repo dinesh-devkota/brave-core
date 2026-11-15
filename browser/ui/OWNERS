@@ -1,0 +1,3 @@
+# Crypto Wallets
+per-file wallet_bubble_manager_delegate_impl.*=set noparent
+per-file wallet_bubble_manager_delegate_impl.*=file://tools/codeowners/CRYPTO_WALLETS_CORE_OWNERS

@@ -1,0 +1,7 @@
+# BravePrefServiceBridge.java is going to be retired soon. We
+# have that owners record temporary to avoid people adding
+# new things there
+per-file BravePrefServiceBridge.java=set noparent
+per-file BravePrefServiceBridge.java=alexey@brave.com
+per-file BravePrefServiceBridge.java=artem@brave.com
+per-file BravePrefServiceBridge.java=serg@brave.com

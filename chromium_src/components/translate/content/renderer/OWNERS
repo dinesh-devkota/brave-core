@@ -1,0 +1,7 @@
+# Renderer code
+set noparent
+file://tools/codeowners/RENDERER_REVIEWERS_OWNERS
+
+# include_rules
+per-file DEPS=set noparent
+per-file DEPS=file://tools/codeowners/DEPS_REVIEWERS_OWNERS

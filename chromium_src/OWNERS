@@ -1,0 +1,28 @@
+set noparent
+file://tools/codeowners/CHROMIUM_SRC_REVIEWERS_OWNERS
+
+# chromium_src Typescript and CSS overrides
+per-file *.css=set noparent
+per-file *.css=file://tools/codeowners/CHROMIUM_SRC_WEB_REVIEWERS_OWNERS
+per-file *.ts=set noparent
+per-file *.ts=file://tools/codeowners/CHROMIUM_SRC_WEB_REVIEWERS_OWNERS
+
+# include_rules
+per-file DEPS=set noparent
+per-file DEPS=file://tools/codeowners/DEPS_REVIEWERS_OWNERS
+
+# Rust code
+per-file *.rs=set noparent
+per-file *.rs=file://tools/codeowners/RUST_REVIEWERS_OWNERS
+
+# Strings
+per-file *.grd=set noparent
+per-file *.grd=file://tools/codeowners/STRING_REVIEWERS_TEAM_OWNERS
+
+# changes to upstream content settings should be done as patches
+per-file content_settings_registry.cc=set noparent
+per-file content_settings_registry.cc=file://tools/codeowners/CONTENT_SETTINGS_REVIEWERS_OWNERS
+
+# new content settings need review
+per-file content_settings_types.mojom=set noparent
+per-file content_settings_types.mojom=file://tools/codeowners/CONTENT_SETTINGS_REVIEWERS_OWNERS

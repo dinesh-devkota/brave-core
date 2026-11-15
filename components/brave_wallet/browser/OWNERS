@@ -1,0 +1,4 @@
+# Crypto Wallets
+per-file brave_wallet_provider_delegate.h=set noparent
+per-file brave_wallet_provider_delegate.h=file://tools/codeowners/CRYPTO_WALLETS_CORE_OWNERS
+per-file brave_wallet_provider_delegate.h=file://tools/codeowners/CRYPTO_WALLETS_IOS_OWNERS

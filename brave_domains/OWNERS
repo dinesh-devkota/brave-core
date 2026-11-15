@@ -1,0 +1,2 @@
+per-file DEPS=set noparent
+per-file DEPS=*

@@ -1,0 +1,7 @@
+# Tor
+per-file brave_tor*.*=set noparent
+per-file brave_tor*.*=file://tools/codeowners/TOR_REVIEWERS_OWNERS
+
+# Brave Sync
+per-file brave_sync_handler.*=set noparent
+per-file brave_sync_handler.*=file://tools/codeowners/SYNC_REVIEWERS_OWNERS

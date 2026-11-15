@@ -1,0 +1,3 @@
+# Browser commands available via Brave Education content
+per-file education_urls.*=set noparent
+per-file education_urls.*=file://tools/codeowners/SEC_TEAM_OWNERS

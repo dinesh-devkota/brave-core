@@ -1,0 +1,9 @@
+# Rewards
+per-file signer.cc=set noparent
+per-file signer.cc=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file signer.h=set noparent
+per-file signer.h=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file request_signer.cc=set noparent
+per-file request_signer.cc=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file request_signer.h=set noparent
+per-file request_signer.h=file://tools/codeowners/SEC_TEAM_OWNERS

@@ -1,0 +1,9 @@
+# GitHub configuration
+set noparent
+file://tools/codeowners/BRAVE_CORE_OWNERS
+file://tools/codeowners/DEVOPS_TEAM_OWNERS
+
+per-file CODEOWNERS=set noparent
+per-file CODEOWNERS=file://tools/codeowners/CODEOWNERS_OWNERS
+per-file PULL_REQUEST_TEMPLATE.md=set noparent
+per-file PULL_REQUEST_TEMPLATE.md=clifton@brave.com

@@ -1,0 +1,12 @@
+per-file audit_deps.py=set noparent
+per-file audit_deps.py=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file deps.py=set noparent
+per-file deps.py=file://tools/codeowners/DEPS_REVIEWERS_OWNERS
+
+# Licensing of third-party components
+per-file brave_license_helper.py=set noparent
+per-file brave_license_helper.py=file://tools/codeowners/LICENSE_REVIEWER_OWNERS
+per-file check_npm_licenses.py=set noparent
+per-file check_npm_licenses.py=file://tools/codeowners/LICENSE_REVIEWER_OWNERS
+per-file generate_licenses.py=set noparent
+per-file generate_licenses.py=file://tools/codeowners/LICENSE_REVIEWER_OWNERS

@@ -1,0 +1,12 @@
+# BraveComponent is deprecated
+per-file brave_component.h=set noparent
+per-file brave_component.h=alazarev@brave.com
+per-file brave_component.h=bjohnson@brave.com
+per-file local_data_files_observer.h=set noparent
+per-file local_data_files_observer.h=alazarev@brave.com
+per-file local_data_files_observer.h=bjohnson@brave.com
+per-file local_data_files_service.h=set noparent
+per-file local_data_files_service.h=alazarev@brave.com
+per-file local_data_files_service.h=bjohnson@brave.com
+per-file BUILD.gn=set noparent
+per-file BUILD.gn=bjohnson@brave.com

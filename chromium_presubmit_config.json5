@@ -2,8 +2,13 @@
   "disabled_checks": {
     // Checks defined in the //PRESUBMIT.py global scope.
     "//PRESUBMIT.py": [
-      // We don't use OWNERS files.
+      // Our OWNERS files mirror .github/CODEOWNERS, which has its own rules for
+      // security-sensitive files.
       "CheckSecurityOwners",
+      // Our OWNERS files mirror .github/CODEOWNERS, whose rules replace those
+      // of parent directories, so they set noparent without
+      // build/OWNERS.setnoparent.
+      "CheckSetNoParent",
       // This validates added strings with screenshot tests which we don't use.
       "CheckStrings",
       // We don't update upstream pydeps.
@@ -21,7 +26,7 @@
     "canned": [
       // Disable Chromium license check. We use our own checker.
       "CheckLicense",
-      // We don't use OWNERS files.
+      // Gerrit's code-owners plugin checks owners itself.
       "CheckOwnersFormat",
       "CheckOwners",
       // We don't use AUTHORS file.

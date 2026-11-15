@@ -1,0 +1,11 @@
+per-file gni_sources.md=set noparent
+per-file gni_sources.md=file://tools/codeowners/SOURCES_GNI_REVIEWERS_OWNERS
+
+# Rust code
+per-file rust.md=set noparent
+per-file rust.md=file://tools/codeowners/RUST_REVIEWERS_OWNERS
+
+per-file keyed_services.md=set noparent
+per-file keyed_services.md=bjohnson@brave.com
+per-file README.md=set noparent
+per-file README.md=*

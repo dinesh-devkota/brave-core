@@ -1,0 +1,3 @@
+# Tor
+per-file onion_location_page_action_controller*=set noparent
+per-file onion_location_page_action_controller*=file://tools/codeowners/TOR_REVIEWERS_OWNERS

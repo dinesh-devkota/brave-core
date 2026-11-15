@@ -1,0 +1,3 @@
+# Java patching
+set noparent
+file://tools/codeowners/JAVA_PATCH_REVIEWERS_OWNERS

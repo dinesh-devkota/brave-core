@@ -1,0 +1,2 @@
+per-file branding.js=set noparent
+per-file branding.js=file://tools/codeowners/BRANDING_CODE_REVIEWER_OWNERS

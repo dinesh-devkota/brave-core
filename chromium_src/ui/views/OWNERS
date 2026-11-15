@@ -1,0 +1,4 @@
+# Views
+# Do not add to BRAVE_VIEW_OWNED_BY_CLIENT_PASS_KEY
+per-file view.h=set noparent
+per-file view.h=file://tools/codeowners/BRAVE_CORE_OWNERS

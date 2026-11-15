@@ -1,0 +1,6 @@
+set noparent
+file://tools/codeowners/PATCH_REVIEWERS_OWNERS
+
+# Java patching
+per-file *.java.patch=set noparent
+per-file *.java.patch=file://tools/codeowners/JAVA_PATCH_REVIEWERS_OWNERS

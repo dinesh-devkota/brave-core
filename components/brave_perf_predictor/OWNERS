@@ -1,0 +1,7 @@
+# Perf predictor
+set noparent
+file://tools/codeowners/ADBLOCK_BRAVE_CORE_DEV_TEAM_OWNERS
+
+# Strings
+per-file *.grdp=set noparent
+per-file *.grdp=file://tools/codeowners/STRING_REVIEWERS_TEAM_OWNERS

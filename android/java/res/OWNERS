@@ -1,0 +1,3 @@
+# Android res
+set noparent
+file://tools/codeowners/ANDROID_OWNERS

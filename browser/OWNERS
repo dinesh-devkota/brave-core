@@ -1,0 +1,10 @@
+# BraveBrowserProcess public interface
+# Global services should use GlobalDesktopFeatures
+# https://chromium.googlesource.com/chromium/src/+/main/docs/chrome_browser_design_principles.md#structure_modularity
+per-file brave_browser_process.h=set noparent
+per-file brave_browser_process.h=file://tools/codeowners/BRAVE_CORE_OWNERS
+
+per-file DEPS=set noparent
+per-file DEPS=*
+per-file README.md=set noparent
+per-file README.md=*

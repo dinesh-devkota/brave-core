@@ -1,0 +1,3 @@
+# Android tests
+per-file android_browser_tests.gni=set noparent
+per-file android_browser_tests.gni=file://tools/codeowners/ANDROID_TESTS_REVIEWERS_OWNERS

@@ -1,0 +1,3 @@
+# l10n scripts deps
+per-file requirements.txt=set noparent
+per-file requirements.txt=file://tools/codeowners/SEC_TEAM_OWNERS

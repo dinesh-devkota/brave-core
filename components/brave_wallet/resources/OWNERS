@@ -1,0 +1,4 @@
+# Crypto Wallets
+per-file *.js=set noparent
+per-file *.js=file://tools/codeowners/CRYPTO_WALLETS_CORE_OWNERS
+per-file *.js=file://tools/codeowners/CRYPTO_WALLETS_IOS_OWNERS

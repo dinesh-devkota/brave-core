@@ -1,0 +1,6 @@
+per-file DEPS=set noparent
+per-file DEPS=*
+per-file README.md=set noparent
+per-file README.md=*
+per-file package.json=set noparent
+per-file package.json=file://tools/codeowners/JS_DEPS_REVIEWERS_OWNERS

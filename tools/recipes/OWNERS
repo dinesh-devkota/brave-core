@@ -1,0 +1,3 @@
+# Chromium and Toolchains
+set noparent
+file://tools/codeowners/CHROMIUM_REBASE_TEAM_OWNERS

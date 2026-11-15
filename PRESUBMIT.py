@@ -777,6 +777,42 @@ def CheckPlasterFiles(input_api, output_api):
     )
 
 
+def CheckOwnersMatchCodeowners(input_api, output_api):
+    """Checks that the OWNERS files still match .github/CODEOWNERS.
+
+    The OWNERS files are generated from .github/CODEOWNERS, so a change to
+    either, or to the team lists, has to come with the other.
+    """
+    inputs = (
+        '.github/CODEOWNERS',
+        'tools/codeowners/generate_owners.py',
+    )
+    if not any(
+        (local_path := f.LocalPath().replace(os.sep, '/')) in inputs
+        or os.path.basename(local_path) == 'OWNERS'
+        or (
+            local_path.startswith('tools/codeowners/')
+            and local_path.endswith('_OWNERS')
+        )
+        for f in input_api.AffectedFiles(include_deletes=True)
+    ):
+        return []
+    return input_api.RunTests(
+        [
+            input_api.Command(
+                name='generate_owners --check',
+                cmd=[
+                    input_api.python3_executable,
+                    'tools/codeowners/generate_owners.py',
+                    '--check',
+                ],
+                kwargs={'cwd': input_api.PresubmitLocalPath()},
+                message=output_api.PresubmitError,
+            )
+        ]
+    )
+
+
 def CheckJson5ParseErrors(input_api, output_api):
     """Check that .json5 files parse without syntax errors.
 

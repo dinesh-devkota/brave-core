@@ -1,0 +1,3 @@
+# BravePrefServiceBridge is deprecated
+per-file brave_pref_service_bridge.cc=set noparent
+per-file brave_pref_service_bridge.cc=bjohnson@brave.com

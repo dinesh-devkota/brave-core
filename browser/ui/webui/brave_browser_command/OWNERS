@@ -1,0 +1,3 @@
+# Browser commands available via Brave Education content
+per-file brave_browser_command_handler.cc=set noparent
+per-file brave_browser_command_handler.cc=file://tools/codeowners/SEC_TEAM_OWNERS

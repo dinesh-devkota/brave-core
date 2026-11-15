@@ -1,0 +1,2 @@
+per-file package.json=set noparent
+per-file package.json=file://tools/codeowners/JS_DEPS_REVIEWERS_OWNERS

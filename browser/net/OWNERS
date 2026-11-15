@@ -1,0 +1,7 @@
+# Network auditor
+per-file brave_network_audit_allowed_lists.h=set noparent
+per-file brave_network_audit_allowed_lists.h=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file brave_network_audit_rewards_browsertest.cc=set noparent
+per-file brave_network_audit_rewards_browsertest.cc=file://tools/codeowners/SEC_TEAM_OWNERS
+per-file brave_network_audit_search_ad_browsertest.cc=set noparent
+per-file brave_network_audit_search_ad_browsertest.cc=file://tools/codeowners/SEC_TEAM_OWNERS

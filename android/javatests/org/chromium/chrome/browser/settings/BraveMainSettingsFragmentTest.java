@@ -83,7 +83,7 @@ public class BraveMainSettingsFragmentTest {
     public void testEmailAliasesPreferenceFollowsPasswords() {
         startSettings();
 
-        Preference passwordsPreference = mMainSettings.findPreference("passwords");
+        Preference passwordsPreference = mMainSettings.findPreference("autofill_and_passwords");
         Preference emailAliasesPreference = mMainSettings.findPreference("email_aliases");
 
         assertNotNull(passwordsPreference);

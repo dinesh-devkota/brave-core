@@ -43,9 +43,8 @@ import java.nio.charset.StandardCharsets;
 @RunWith(ChromeJUnit4ClassRunner.class)
 @CommandLineFlags.Add({ChromeSwitches.DISABLE_FIRST_RUN_EXPERIENCE})
 @Batch(Batch.PER_CLASS)
-@EnableFeatures(BraveDownloadImageMetadataStripperTest.STRIP_IMAGE_METADATA_FEATURE)
 public class BraveDownloadImageMetadataStripperTest {
-    private static final String STRIP_IMAGE_METADATA_FEATURE = "StripImageMetadataV1";
+    static final String STRIP_IMAGE_METADATA_FEATURE = "StripImageMetadataV1";
 
     // The "real" JPEG fixture shared with the desktop browser test. It carries a Facebook FBMD
     // record inside its IPTC metadata that the stripper is expected to scrub.
@@ -153,6 +152,7 @@ public class BraveDownloadImageMetadataStripperTest {
     @Test
     @LargeTest
     @Feature({"Downloads"})
+    @EnableFeatures(STRIP_IMAGE_METADATA_FEATURE)
     public void testRemovesFbmdMetadataFromDownloadedJpegImage() throws Exception {
         byte[] originalContents = readOriginalImageBytes();
         // Sanity check the fixture actually carries an FBMD record to strip.

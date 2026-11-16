@@ -113,7 +113,7 @@ substitutions:
         -->
 
   - description: |
-      Add BIND_GET_INSTALL_REFERRER_SERVICE.
+      Add BIND_GET_INSTALL_REFERRER_SERVICE and declare optional Android TV support.
 
       Needed to receive the install referrer broadcast from the Google Play
       Store.
@@ -122,6 +122,7 @@ substitutions:
       re_flags: [MULTILINE]
       replace: |-
         \1<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+        \1<uses-feature android:name="android.software.leanback" android:required="false" />
         \1\2
 
   - description: |

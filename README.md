@@ -2,6 +2,23 @@
 
 # Brave Core
 
+## Media Vault Android TV prototype
+
+This branch starts a TV companion for CoveShelf, the app in
+[Media Vault](https://github.com/dinesh-devkota/mediavault). The Android TV
+launcher entry is **CoveShelf Web Video**. Its default development package ID
+is `com.dineshdevkota.coveshelf.browser`, which CoveShelf requests when opening a
+video site in a Custom Tab. The browser handles the page and applies the user's
+Brave Shields settings. Remote support varies by website.
+
+On a [supported Linux Android build host](https://github.com/brave/brave-browser/wiki/Android-Development-Environment),
+clone this branch into `src/brave` as described below. From that directory, use
+`pnpm run init --target_os=android --target_arch=arm64` and
+`pnpm run build Debug --target_os=android --target_arch=arm64` for an ARM64 TV.
+Use the matching target architecture for other devices. Install the resulting
+browser APK and the Media Vault Android TV app on the same device, then open
+**Web Video** in CoveShelf.
+
 Brave Core is a set of changes, APIs, and scripts used for customizing Chromium
 to make the Brave browser. Please also check
 https://github.com/brave/brave-browser which only holds the issues, releases and

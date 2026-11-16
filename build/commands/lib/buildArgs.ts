@@ -227,10 +227,10 @@ export function getBuildArgs(config: Config) {
     args.android_channel = config.channel
     if (!config.isReleaseBuild()) {
       args.android_channel = 'default'
-      args.chrome_public_manifest_package = 'com.brave.browser_default'
+      args.chrome_public_manifest_package = 'com.dineshdevkota.coveshelf.browser'
     } else if (config.channel === '') {
       args.android_channel = 'stable'
-      args.chrome_public_manifest_package = 'com.brave.browser'
+      args.chrome_public_manifest_package = 'com.dineshdevkota.coveshelf.browser'
     } else if (config.channel === 'beta') {
       args.chrome_public_manifest_package = 'com.brave.browser_beta'
     } else if (config.channel === 'dev') {

@@ -231,6 +231,7 @@ android_resources("java_resources") {
     "java/brave-res/drawable/button_outline.xml",
     "java/brave-res/drawable/button_transparent.xml",
     "java/brave-res/drawable/card_bg.xml",
+    "java/brave-res/drawable/coveshelf_tv_banner.xml",
     "java/brave-res/drawable/create_custom_filter_edit_bg.xml",
     "java/brave-res/drawable/crypto_wallet_blue_button.xml",
     "java/brave-res/drawable/crypto_wallet_hollow_button.xml",

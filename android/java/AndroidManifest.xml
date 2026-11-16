@@ -1,3 +1,15 @@
+<!-- TV-only launcher entry. Web links and Custom Tabs use Brave's usual dispatcher. -->
+<activity-alias android:name=".CoveShelfTvLauncher"
+    android:targetActivity="org.chromium.chrome.browser.document.ChromeLauncherActivity"
+    android:label="CoveShelf Web Video"
+    android:banner="@drawable/coveshelf_tv_banner"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+    </intent-filter>
+</activity-alias>
+
 <receiver android:name="org.chromium.chrome.browser.notifications.retention.RetentionNotificationPublisher"
     android:exported="false">
 </receiver>

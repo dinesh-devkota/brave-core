@@ -591,9 +591,32 @@ void WorkspaceService::NoteWindowCloseRequested(
   // out of tabs: Browser::TabStripEmpty() closes it through the same path a
   // person's close request takes. Tabs still being present is what marks this
   // as the person's doing.
-  if (window->GetTabStripModel()->count() > 0) {
-    windows_closed_by_person_.insert(window->GetSessionID());
+  if (window->GetTabStripModel()->count() == 0) {
+    return;
   }
+
+  // The close can still be refused, by a beforeunload handler or a download
+  // warning. The subscription clears the mark in that case: a window that
+  // stays is not one the person is closing, and leaving the mark would make
+  // losing its last tab later look like an explicit close.
+  const SessionID window_id = window->GetSessionID();
+  windows_closed_by_person_.insert_or_assign(
+      window_id, window->RegisterBrowserCloseCancelled(base::BindRepeating(
+                     &WorkspaceService::OnWindowCloseRequestCancelled,
+                     GetWeakPtr(), window_id)));
+}
+
+void WorkspaceService::OnWindowCloseRequestCancelled(
+    SessionID window_id,
+    BrowserWindowInterface* window,
+    BrowserWindowInterface::ClosingStatus status) {
+  // Unload handlers still running is not a refusal; the close may yet go
+  // through.
+  if (status ==
+      BrowserWindowInterface::ClosingStatus::kDeniedUnloadHandlersNeedTime) {
+    return;
+  }
+  windows_closed_by_person_.erase(window_id);
 }
 
 base::WeakPtr<WorkspaceService> WorkspaceService::GetWeakPtr() {

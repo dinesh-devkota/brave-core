@@ -218,6 +218,14 @@ class WorkspaceService : public KeyedService,
   // window is left holding the workspace.
   void FinishDeletingWorkspace(const base::Uuid& id);
 
+  // Called when a close the person asked for was refused, so the window is
+  // no longer on its way out and losing its last tab later means what it
+  // normally means.
+  void OnWindowCloseRequestCancelled(
+      SessionID window_id,
+      BrowserWindowInterface* window,
+      BrowserWindowInterface::ClosingStatus status);
+
   // Called when the window holding a workspace queued for deletion refused to
   // close, so the deletion is abandoned rather than leaving the window with
   // nothing to save it.
@@ -286,8 +294,10 @@ class WorkspaceService : public KeyedService,
 
   // Windows the person asked to close, as opposed to ones closing because
   // their last tab went. Closing a workspace window outright ends the
-  // session; losing its last tab returns to the unmanaged window.
-  std::set<SessionID> windows_closed_by_person_;
+  // session; losing its last tab returns to the unmanaged window. The
+  // subscription hears about the close being refused, since a window that
+  // stays is no longer one the person is closing.
+  std::map<SessionID, base::CallbackListSubscription> windows_closed_by_person_;
 
   // Workspaces whose window has been asked to close so they can be deleted.
   // Nothing is destroyed until that window is actually gone, because Close()

@@ -4,6 +4,7 @@
  * You can obtain one at https://mozilla.org/MPL/2.0/. */
 package org.chromium.chrome.browser.firstrun;
 
+import android.content.pm.PackageManager;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
@@ -152,6 +153,11 @@ public class OnboardingStepAdapter
         }
 
         public abstract void viewRecycled();
+
+        protected boolean isTelevision() {
+            return itemView.getContext().getPackageManager().hasSystemFeature(
+                    PackageManager.FEATURE_LEANBACK);
+        }
     }
 
     private static final class HelpBraveSearchViewHolder extends OnboardingBaseViewHolder {
@@ -176,6 +182,11 @@ public class OnboardingStepAdapter
 
             mSure = itemView.findViewById(R.id.onboarding_sure);
             mSure.setClipToOutline(true);
+            if (isTelevision()) {
+                mLater.setFocusedByDefault(true);
+                mSubtitle.setNextFocusDownId(mLater.getId());
+                mLater.setNextFocusUpId(mSubtitle.getId());
+            }
             mSure.setOnClickListener(
                     view -> {
                         listener.onWebDiscoverPreferenceEnabled();
@@ -197,6 +208,7 @@ public class OnboardingStepAdapter
                 final View itemView, final OnboardingNavigationListener listener) {
             super(itemView);
             mContinue = itemView.findViewById(R.id.onboarding_continue);
+            if (isTelevision()) mContinue.setFocusedByDefault(true);
             mContinue.setClipToOutline(true);
             mContinue.setOnClickListener(
                     view -> listener.onRequestPageChange(MAKE_BRAVE_BETTER_POSITION));
@@ -224,6 +236,7 @@ public class OnboardingStepAdapter
                 final OnboardingNavigationListener listener) {
             super(itemView);
             mStartBrowsing = itemView.findViewById(R.id.onboarding_start_browsing);
+            if (isTelevision()) mStartBrowsing.setFocusedByDefault(true);
             mStartBrowsing.setClipToOutline(true);
             mStartBrowsing.setOnClickListener(view -> listener.onDismiss());
 

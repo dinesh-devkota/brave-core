@@ -1,5 +1,5 @@
 diff --git a/extensions/browser/BUILD.gn b/extensions/browser/BUILD.gn
-index ef74db19640fd6473f711944ff559b52b05e704f..f6afe2a866e9b4acbeb158c8eb4c693de497c77f 100644
+index 6b87fa5938d6bec02f47d7f626a542b0ef647e59..404dd15708a389cb4653ecc65581364e20c37753 100644
 --- a/extensions/browser/BUILD.gn
 +++ b/extensions/browser/BUILD.gn
 @@ -10,7 +10,7 @@ import("//rlz/buildflags/buildflags.gni")
@@ -11,7 +11,7 @@ index ef74db19640fd6473f711944ff559b52b05e704f..f6afe2a866e9b4acbeb158c8eb4c693d
    import("//build/config/android/rules.gni")
  }
  
-@@ -1324,7 +1324,7 @@ source_set("unit_tests") {
+@@ -1327,7 +1327,7 @@ source_set("unit_tests") {
    ]
  }
  

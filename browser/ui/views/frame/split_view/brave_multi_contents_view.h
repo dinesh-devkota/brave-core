@@ -13,6 +13,7 @@
 #include "base/gtest_prod_util.h"
 #include "base/memory/raw_ptr.h"
 #include "chrome/browser/ui/views/frame/multi_contents_view.h"
+#include "components/split_tabs/split_tab_visual_data.h"
 #include "ui/base/metadata/metadata_header_macros.h"
 #include "ui/gfx/geometry/rounded_corners_f.h"
 
@@ -32,6 +33,17 @@ class BraveMultiContentsView : public MultiContentsView {
 
  public:
   static BraveMultiContentsView* From(MultiContentsView* view);
+
+  // Returns |corner_radii| with the corners that meet the split divider
+  // replaced by the smaller border radius. Which corners those are depends on
+  // |layout|: the divider is vertical for kSideBySide and horizontal for
+  // kStacked. Exposed as a public static so tests can call it directly without
+  // constructing a view.
+  static gfx::RoundedCornersF GetSplitContentsCornerRadii(
+      const gfx::RoundedCornersF& corner_radii,
+      split_tabs::SplitTabLayout layout,
+      bool is_first,
+      bool is_last);
 
   using MultiContentsView::MultiContentsView;
   ~BraveMultiContentsView() override;

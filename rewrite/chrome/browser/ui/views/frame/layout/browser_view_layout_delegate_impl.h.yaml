@@ -24,6 +24,8 @@ substitutions:
         bool IsFullscreenForTab() const override;
         bool IsWebPanelVisible() const override;
         bool IsWebPanelOnLeft() const override;
+        bool IsSidebarAtContentsEdge() const override;
+        bool IsSidebarOnLeft() const override;
         void UpdateContentsCornerRadii(
             const gfx::RoundedCornersF& corner_radii,
             const gfx::RoundedCornersF& web_panel_corner_radii) override;

@@ -24,6 +24,10 @@ substitutions:
         virtual bool IsFullscreenForTab() const = 0;
         virtual bool IsWebPanelVisible() const = 0;
         virtual bool IsWebPanelOnLeft() const = 0;
+        virtual bool IsSidebarAtContentsEdge() const = 0;
+        // Reports the unmirrored visual side, like IsWebPanelOnLeft(). RTL
+        // mirroring is the caller's job.
+        virtual bool IsSidebarOnLeft() const = 0;
         virtual void UpdateContentsCornerRadii(
             const gfx::RoundedCornersF& corner_radii,
             const gfx::RoundedCornersF& web_panel_corner_radii) = 0;
